@@ -148,7 +148,7 @@
     </nav>
     <section class="section1">
       <div class="leftBox">
-        <h1>Transform Your <span style="color: #1093eb">Career</span>  with Expert-Led Training</h1>
+        <h1>Transform Your <span style="color: #1093eb" id="text">Career</span>  with Expert-Led Training</h1>
         <p>At VRG Technology, we're excited to offer a complete UI/UX Design Bootcamp. It's designed to give 
           you the skills you need to succeed in digital design. Whether you're starting a new career or 
           improving your current skills, our bootcamp is designed to provide hands-on learning, expert 
@@ -156,7 +156,9 @@
         <button class="exploreBtn">Explore Program</button>
       </div>
       <div class="rightImage">
-        <img src="images/home.png" alt="Home Image">
+        <h1 style="text-align: center; font-size: 70px;" id="new"></h1>
+        <img style="border-radius: 100%; height: 70vh; background-size: cover; width: auto; padding-left: 130px;" src="C:\Users\HP\Desktop\Vernure\Growth\images\Person.jpg" alt="Home Image">
+
       </div>
     </section>
     <section class="section2">
@@ -413,36 +415,45 @@
       </div>
     </section>
     <section class="section5">
-      <h1 >Community-led learning is the future ⚡️</h1>
-      <p >We at Growth School facilitate a dynamic community to build real-world problem-solving skills.</p>
+      <h1 >What You'll Gain ⚡️</h1>
+      <p >Fast-track your UI/UX career with VRG's bootcamp</p>
     </section>
     <section class="section3">
       <div class="leftImgBox">
-          <img class="leftImg" src="images/mobile.png" ></img>
+          <!-- <img class="leftImg" src="C:\Users\HP\Desktop\Vernure\Growth\images\Ui.jpg"  ></img> -->
+          <img style="height: 60vh ; border-radius: 30px;" src="C:\Users\HP\Desktop\Vernure\Growth\images\Ui.jpg"  ></img>
+
       </div>
       <div class="rightContent">
         <div class="eachBox1">
           <div class="iconNumber">1</div>
           <div class="contentBox">
-            <h1>Build relationships beyond networks</h1>
-            <p>Work with motivated peers having fresh out-of-the-box thinking and showing you new ways to do things.</p>
+            <h1>Practical Skills</h1>
+            <p>Participants will work on real-world projects to apply theoretical concepts, enhancing their ability to create intuitive, user-friendly digital products.</p>
           </div>
         </div>
         <div class="eachBox1">
           <div class="iconNumber">2</div>
           <div class="contentBox">
-            <h1>Live events to engage in</h1>
-            <p>Participate in live Q&As, debates, hackathons, and other healthy contests to drive home the learning.</p>
+            <h1>Professional Portfolio</h1>
+            <p>Create a standout portfolio filled with impressive real-world design projects that highlight your unique skills and creativity.</p>
           </div>
         </div>
         <div class="eachBox1">
           <div class="iconNumber">3</div>
           <div class="contentBox">
-            <h1>Find career opportunities</h1>
-            <p>Become a part of an ecosystem where members help access opportunities for jobs and freelance projects.
+            <h1>Job-Ready Expertise</h1>
+            <p>Acquire the essential skills and knowledge needed to thrive in the competitive UI/UX job market, making you job-ready from day one.
             </p>
           </div>
         </div>
+        <div class="eachBox1">
+            <div class="iconNumber">4</div>
+            <div class="contentBox">
+              <h1>Mentorship and Support</h1>
+              <p>Benefit from invaluable mentorship and support from seasoned industry professionals, guiding you towards unlocking your full potential in the dynamic world of UI/UX design.</p>
+            </div>
+          </div>
       </div>
     </section>
     <footer class="footer">
@@ -492,7 +503,6 @@
               <img src="images/brands/instagram.svg" alt="">
               <img src="images/brands/linkedin.svg" alt="">
             </div>
-            <p>Cloned By ~ 😎 Yash Kumar Saini ❤️ <a href="https://www.linkedin.com/in/yashkumarsaini/" target="_blank" >Contact Me</a></p>
           </div>
           <div class="infoBox">
             <div class="eachInfo">
@@ -521,5 +531,36 @@
     
     <script src="styles/carousel.js"></script>
     <script src="styles/navScript.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+    const phrases = ["Learn", "Inspire", "Innovate"];
+    let currentIndex = 0;
+    const textElement = document.getElementById('text');
+    const newtext = document.getElementById('new');
+    function changeTextAndColor() {
+        textElement.classList.remove('visible');  
+
+        setTimeout(() => {
+            newtext.textContent = phrases[currentIndex];  
+            newtext.style.color = getColor();  
+            newtext.classList.add('visible'); 
+
+            currentIndex = (currentIndex + 1) % phrases.length; 
+        }, 1000); 
+    }
+
+    setInterval(changeTextAndColor, 1000);  
+    changeTextAndColor();
+});
+
+function getColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+    </script>
   </body>
 </html>
