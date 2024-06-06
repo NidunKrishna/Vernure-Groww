@@ -160,11 +160,14 @@
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    
-    
+
+  }
+  .leftImg {
+    width: 215px; 
   }
   .leftImg {
     width: 100%;
+
     height: auto;
   }
   .iconNumber {
@@ -279,6 +282,10 @@
     .contentBox p {
       font-size: 16px;
     }
+
+  }
+  
+
   }
 
 }
@@ -530,3 +537,4 @@ ul li .descr::before {
   box-shadow: none;
   color: #2c5777;
 }
+
