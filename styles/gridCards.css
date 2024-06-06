@@ -13,6 +13,8 @@
   .section5 p {
     line-height: 1.5;
   }
+
+ 
   .gridContainer {
     column-fill: balance;
     column-count: 3;
@@ -29,7 +31,18 @@
     margin: 0px 8px 32px 8px;
     page-break-inside: avoid;
     break-inside: avoid;
+    
+
   }
+
+  .gridCard img {
+
+    height: 17vh;
+    padding-left: 60px;
+
+  }
+
+
   .gridCard p {
     font-size: 16px;
     line-height: 1.5;
@@ -46,7 +59,7 @@
   }
   .userName img {
     width: 54px;
-    height: 54px;
+    height: 5px;
     border-radius: 100px;
     margin-right: 16px;
   }
