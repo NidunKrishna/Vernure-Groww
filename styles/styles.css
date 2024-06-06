@@ -170,6 +170,72 @@
 
     height: auto;
   }
+  .icon-text-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-direction: row;
+}
+
+.icon-text {
+   
+    color: black;
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    width: 30%;
+    justify-content: center;
+    
+}
+#text {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#new {
+  transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.visible #new {
+  opacity: 10;
+}
+
+
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.timeline .date, .timeline .title, .timeline .descr {
+  margin: 5px 0;
+}
+
+.timeline li.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+.icon-text img {
+    margin-right: 10px;
+    height: 64px; 
+    width: auto;
+}
+
+.icon-text:hover {
+    background-color: #005f5f;
+}
   .iconNumber {
     font-size: 80px;
     vertical-align: text-top;

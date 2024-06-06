@@ -16,6 +16,63 @@
     <link rel="stylesheet" href="styles/carousel.css" />
     <link rel="stylesheet" href="styles/gridCards.css"/>
     <link rel="stylesheet" href="styles/footer.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+     const phrases = ["Learn", "Inspire", "Innovate"];
+     let currentIndex = 0;
+     const textElement = document.getElementById('text');
+     const newtext = document.getElementById('newtext'); // Update the ID here
+ 
+     function changeTextAndColor() {
+         newtext.classList.remove('visible');  
+ 
+         setTimeout(() => {
+             textElement.textContent = phrases[currentIndex];  
+             textElement.style.color = getColor();  
+             textElement.classList.add('visible'); 
+ 
+             currentIndex = (currentIndex + 1) % phrases.length; 
+         }, 500); 
+     }
+ 
+     setInterval(changeTextAndColor, 1000);  
+     changeTextAndColor();
+ 
+     // Timeline animation
+     const timelineItems = document.querySelectorAll('.timeline li');
+ 
+     const isInViewport = (element) => {
+         const rect = element.getBoundingClientRect();
+         return (
+             rect.top >= 0 &&
+             rect.left >= 0 &&
+             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+         );
+     };
+ 
+     const run = () => {
+         timelineItems.forEach(item => {
+             if (isInViewport(item)) {
+                 item.classList.add('in-view');
+             }
+         });
+     };
+ 
+     run();
+     window.addEventListener('scroll', run);
+ });
+ 
+ function getColor() {
+     const letters = '0123456789ABCDEF';
+     let color = '#';
+     for (let i = 0; i < 6; i++) {
+         color += letters[Math.floor(Math.random() * 16)];
+     }
+     return color;
+ }
+ 
+     </script>
   </head>
   <body>
     <nav class="navbar">
@@ -156,7 +213,7 @@
         <button class="exploreBtn">Explore Program</button>
       </div>
       <div class="rightImage">
-        <h1 style="text-align: center; font-size: 70px;" id="new"></h1>
+        <h1 style="text-align: center; font-size: 70px; color: black;" id="new">Hello</h1>
         <img style="border-radius: 100%; height: 70vh; background-size: cover; width: auto; padding-left: 130px;" src="C:\Users\HP\Desktop\Vernure\Growth\images\Person.jpg" alt="Home Image">
 
       </div>
@@ -349,13 +406,13 @@
       <section class="section5">
         <h1>Target Audience</h1>
         <p>Key professional group who would benefit from this program</p>
-        <div style="display: flex;justify-content: space-between; ">
-            <p class="icon-text"><img src="Target\software"/> Graphic designers</p>
-            <p class="icon-text"><img class="fas fa-globe"/>Web designers</p>
-            <p class="icon-text"><img class="fas fa-code"/>Software developers</p>
-            <p class="icon-text"><img class="fas fa-laptop-code"/> Front end developers</p>
-            <p class="icon-text"><img class="fas fa-bullhorn"/> Digital marketers</p>
-            <p class="icon-text"><img style="height: 20vh;" src="C:\Users\HP\Desktop\Vernure\Growth\images\Target\analyst.png"/>Business Analysts</p>
+        <div class="icon-text-container">
+          <p class="icon-text"><img src="C:\Users\HP\Desktop\Vernure\Growth\images\Target\designer.png" /> Graphic designers</p>
+          <p class="icon-text"><img src="C:\Users\HP\Desktop\Vernure\Growth\images\Target\ux.png" /> Web designers</p>
+          <p class="icon-text"><img src="C:\Users\HP\Desktop\Vernure\Growth\images\Target\software.png" /> Software developers</p>
+          <p class="icon-text"><img src="C:\Users\HP\Desktop\Vernure\Growth\images\Target\ui-design.png" /> Front end developers</p>
+          <p class="icon-text"><img src="C:\Users\HP\Desktop\Vernure\Growth\images\Target\globalization.png" /> Digital marketers</p>
+          <p class="icon-text"><img src="C:/Users/HP/Desktop/Vernure/Growth/images/Target/analyst.png" /> Business Analysts</p>
         </div>
     </section>
 
@@ -520,36 +577,6 @@
     
     <script src="styles/carousel.js"></script>
     <script src="styles/navScript.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-    const phrases = ["Learn", "Inspire", "Innovate"];
-    let currentIndex = 0;
-    const textElement = document.getElementById('text');
-    const newtext = document.getElementById('new');
-    function changeTextAndColor() {
-        textElement.classList.remove('visible');  
-
-        setTimeout(() => {
-            newtext.textContent = phrases[currentIndex];  
-            newtext.style.color = getColor();  
-            newtext.classList.add('visible'); 
-
-            currentIndex = (currentIndex + 1) % phrases.length; 
-        }, 1000); 
-    }
-
-    setInterval(changeTextAndColor, 1000);  
-    changeTextAndColor();
-});
-
-function getColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
-    </script>
+    
   </body>
 </html>
