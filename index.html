@@ -4,19 +4,79 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GrowthSchool | Cloned by Yash Kumar Saini</title>
+    <title>VRG Technology</title>
     <link href="images/icon.svg" rel="shortcut icon" type="image/x-icon" />
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/carousel.css" />
     <link rel="stylesheet" href="styles/gridCards.css"/>
     <link rel="stylesheet" href="styles/footer.css" />
+<<<<<<< Updated upstream
   </head>
+=======
+    <link rel="stylesheet" href="styles/faqs.css" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+     const phrases = ["Learn", "Inspire", "Innovate"];
+     let currentIndex = 0;
+     const textElement = document.getElementById('text');
+     const newtext = document.getElementById('newtext'); 
+ 
+     function changeTextAndColor() {
+         newtext.classList.remove('visible');  
+ 
+         setTimeout(() => {
+             textElement.textContent = phrases[currentIndex];  
+             textElement.style.color = getColor();  
+             textElement.classList.add('visible'); 
+ 
+             currentIndex = (currentIndex + 1) % phrases.length; 
+         }, 500); 
+     }
+ 
+     setInterval(changeTextAndColor, 1000);  
+     changeTextAndColor();
+ 
+     // Timeline animation
+     const timelineItems = document.querySelectorAll('.timeline li');
+ 
+     const isInViewport = (element) => {
+         const rect = element.getBoundingClientRect();
+         return (
+             rect.top >= 0 &&
+             rect.left >= 0 &&
+             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+         );
+     };
+ 
+     const run = () => {
+         timelineItems.forEach(item => {
+             if (isInViewport(item)) {
+                 item.classList.add('in-view');
+             }
+         });
+     };
+ 
+     run();
+     window.addEventListener('scroll', run);
+ });
+ 
+ function getColor() {
+     const letters = '0123456789ABCDEF';
+     let color = '#';
+     for (let i = 0; i < 6; i++) {
+         color += letters[Math.floor(Math.random() * 16)];
+     }
+     return color;
+ }
+ </script>
+</head>
+ 
+>>>>>>> Stashed changes
   <body>
     <nav class="navbar">
       <div class="navBox">
@@ -140,7 +200,7 @@
           <a href="#">Intensive Programs</a>
           <a href="#">Guides</a>
           <a href="#">About</a>
-          <a href="#">We’re Hiring 💼</a>
+          <a href="#">We’re Hiring </a>
           <button class="button1">Apply as Mentor</button>
           <button class="button2">Login</button>
         </div>
@@ -148,7 +208,11 @@
     </nav>
     <section class="section1">
       <div class="leftBox">
+<<<<<<< Updated upstream
         <h1>Transform Your <span style="color: #1093eb">Career</span>  with Expert-Led Training</h1>
+=======
+        <h1>Transform Your <span style="color: #1093eb"  id="text">Career</span>  with Expert-Led Training</h1>
+>>>>>>> Stashed changes
         <p>At VRG Technology, we're excited to offer a complete UI/UX Design Bootcamp. It's designed to give 
           you the skills you need to succeed in digital design. Whether you're starting a new career or 
           improving your current skills, our bootcamp is designed to provide hands-on learning, expert 
@@ -156,11 +220,17 @@
         <button class="exploreBtn">Explore Program</button>
       </div>
       <div class="rightImage">
+<<<<<<< Updated upstream
         <img src="images/home.png" alt="Home Image">
+=======
+        <h1 style="text-align: center; font-size: 70px; color: black;" id="new">Hello</h1>
+        <img style="border-radius: 100%; height: 70vh; background-size: cover; width: auto; padding-left: 130px;" src="C:\Users\HP\Desktop\Vernure\Growth\images\Person.jpg" alt="Home Image">
+
+>>>>>>> Stashed changes
       </div>
     </section>
     <section class="section2">
-      <h1>Why Join Our Bootcamp?      </h1>
+      <h1>Why Join Our Bootcamp? </h1>
     </section>
     <!-- For Video and content -->
     <section class="section3">
@@ -192,8 +262,7 @@
             <h1>Expert Mentorship</h1>
             <p>Learn from industry leaders who bring a wealth of experience and knowledge. Our mentors are 
               dedicated to helping you succeed, providing personalized guidance and feedback throughout the 
-              program.
-              
+              program.              
             </p>
           </div>
         </div>
@@ -214,8 +283,7 @@
       <div class="outerBox">
         <div class="mentors">
           <h1>Mentors. <br/>
-            Practitioners.😎</h1>
-            <button >View All</button>
+            Practitioners.</h1>
         </div>
         <div class="mentorCards">
           <div class="cardArrow">
@@ -273,7 +341,6 @@
       </div>
       <div class="experts">
         <h1>Experts</h1>
-        <p>from top brands & companies are mentoring at GrowthSchool</p>
         <div  class="companyLogos rightMovement" id="rightMovement">
           <div class="moveBox">
             <div><img src="images/company/logo1.svg" alt=""></div>
@@ -362,6 +429,7 @@
       <p>Students, professionals, and budding entrepreneurs drive and inspire us and make up <br/> the Growth School community. Here's what they have to say.</p>
       <div class="gridContainer">
         <div class="gridCard">
+<<<<<<< Updated upstream
           <img src="images/quote.svg" alt="">
           <p>First time in my life, I received Blockchain Anchored certificate 🔖 I went through the growth hacking mentorship with Vaibhav Sisinty and GrowthSchool. I learned so many new and unique things regarding growth hacking, and it was mind-blowing, like North star matrics, MTM, Hyper-personalized data-driven marketing, and many more things. Additionally, I made some lovely friends in the cohort system. Vaibhav gave very high-value quality content, and now he amazed us with such a unique, verifiable certificate on the Ethereum network 😯. This was one of the best programs of my life.</p>
           <div class="userName">
@@ -401,14 +469,52 @@
             <img src="images/users/user2.jpeg" alt="">
             <h2>Surbhi Sanodiya</h2>
           </div>
+=======
+            <h2>Aspiring UI/UX Designers </h2> <br>
+            <img src="images\users\UI_UX_aspirers.jpg" >
+         <p>Start your journey in UI/UX design with our bootcamp. Gain hands-on experience, learn industry-standard tools, and build a portfolio to stand out in the job market.    </p>
+         
         </div>
         <div class="gridCard">
+         
+          <h2>Graphic Designers </h2> <br>
+          <img src="images\users\graphic_designer.jpg" >
+          <p>Transition into UI/UX design seamlessly with our bootcamp. Explore user experience principles, master digital interface design, and build a portfolio that showcases your expanded skill set.</p>
+         
+        </div>
+        <div class="gridCard">
+          <h2>Web Designers </h2> <br>
+          <img src="images\users\web_designer.jpg" >
+          <p> Enhance your web design skills with our bootcamp. Learn user-centered design principles, create immersive interfaces, and stay ahead in today's digital landscape</p>
+         
+        </div>
+        <div class="gridCard">
+         <h2>Developers and Engineers </h2> <br>
+         <img src="images\users\developers_and_engineers.jpg">
+         <p>Bridge the gap between tech and user experience with our bootcamp. Gain insights into user-centric design, learn to create seamless interactions, and collaborate effectively with designers.
+
+         </p>
+        </div>
+        
+        <div class="gridCard">
+          <h2>Product Managers </h2> <br>
+          <img src="images\users\product_manager.png">
+          <p> Lead successful product development initiatives with our bootcamp. Gain a deep understanding of user needs, learn to prioritize features.</p>
+>>>>>>> Stashed changes
+        </div>
+        <div class="gridCard">
+<<<<<<< Updated upstream
           <img src="images/quote.svg" alt="">
           <p>I want to thank GrowthSchool for hosting such a comprehensive and profound workshop. We all know LinkedIn is a goldmine of opportunities. And this workshop is designed for anyone who wants to kick-start their LinkedIn journey and also want to use it to its full potential. The workshop is well worth your money and time. Thank you Vaibhav Sisinty ↗️ for conducting such an engaging and valuable session and sharing so many incredible hacks.</p>
           <div class="userName">
             <img src="images/users/user4.jpeg" alt="">
             <h2>Pragya Singh</h2>
           </div>
+=======
+          <h2>Entrepreneurs </h2> <br>
+          <img src="images\users\entrepreneurs.jpg"> <br>
+          <p>Launch user-friendly digital products with our bootcamp. Learn to identify user pain points, prototype and test your ideas, and turn your vision into a successful digital experience.</p>
+>>>>>>> Stashed changes
         </div>
         <div class="gridCard">
           <img src="images/quote.svg" alt="">
@@ -462,7 +568,7 @@
       </div>
     </section>
     <section class="section5">
-      <h1 >What You'll Gain ⚡️</h1>
+      <h1 >What You'll Gain</h1>
       <p >Fast-track your UI/UX career with VRG's bootcamp</p>
     </section>
     <section class="section3">
@@ -501,38 +607,104 @@
           </div>
       </div>
     </section>
+<<<<<<< Updated upstream
+=======
+   
+
+<section class="faqs">
+<h1>Frequently Asked Questions</h1>
+
+<div class="faqs-container">
+  <div class="faq active">
+    <h3 class="faq-title">
+        What is UI/UX design? 
+    </h3>
+    <p class="faq-text">
+        UI (User Interface) design focuses on the look and feel of digital interfaces, while UX (User Experience) design focuses on how users interact with those interfaces to achieve their goals. 
+    </p>
+    <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  <div class="faq">
+    <h3 class="faq-title">
+        Why is UI/UX design important? 
+    </h3>
+    <p class="faq-text">
+        Good UI/UX design enhances user satisfaction, improves usability, and increases the overall effectiveness of digital products. 
+    </p>
+    <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  <div class="faq">
+    <h3 class="faq-title">
+        What does a UI designer do? 
+    </h3>
+    <p class="faq-text">
+        A UI designer creates the visual elements of a digital product, including layout, colours, typography, and icons, to ensure a cohesive and aesthetically pleasing user interface. 
+
+    </p>
+    <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  <div class="faq">
+    <h3 class="faq-title">
+        What does a UX designer do? 
+    </h3>
+    <p class="faq-text">
+        A UX designer researches user needs and behaviours, creates wireframes and prototypes, and designs interactions to ensure a seamless and intuitive user experience. 
+    </p>
+    <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  <div class="faq">
+    <h3 class="faq-title">
+        How does UI/UX design benefit businesses? 
+    </h3>
+    <p class="faq-text">
+        Effective UI/UX design can lead to increased user engagement, higher conversion rates, and improved customer satisfaction, ultimately driving business success. 
+    </p>
+    <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="faq">
+    <h3 class="faq-title">
+        How does UI/UX design impact mobile apps? 
+
+    </h3>
+    <p class="faq-text">
+        UI/UX design is crucial for mobile apps as it ensures that users can navigate the app easily on smaller screens, leading to better engagement and retention. 
+    </p>
+    <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+</div>
+
+      
+
+
+</section>
+
+
+
+>>>>>>> Stashed changes
     <footer class="footer">
-      <div class="footerBox">
-        <h1>Backed by 💰</h1>
-        <div class="imgsBox">
-          <div class="bigImages">
-            <div><img src="images/owl.svg" alt=""></div>
-            <div><img src="images/footer2.svg" alt=""></div>
-          </div>
-          <div class="inverstors">
-            <p>80+ Angel Inverstors</p>
-            <div class="overlapImages">
-              <img src="images/users/user.jpeg" alt="" >
-              <img src="images/users/user1.jpeg" alt="">
-              <img src="images/users/user2.jpeg" alt="">
-              <img src="images/users/user3.jpeg" alt="">
-              <img src="images/users/user4.jpeg" alt="">
-              <img src="images/users/user5.jpeg" alt="">
-              <img src="images/users/user.jpeg" alt="">
-              <img src="images/users/user1.jpeg" alt="">
-            </div>
-            <div class="overlapImages">
-              <img src="images/users/user.jpeg" alt="" >
-              <img src="images/users/user1.jpeg" alt="">
-              <img src="images/users/user2.jpeg" alt="">
-              <img src="images/users/user3.jpeg" alt="">
-              <img src="images/users/user4.jpeg" alt="">
-              <img src="images/users/user5.jpeg" alt="">
-              <img src="images/users/user.jpeg" alt="">
-              <img src="images/users/user1.jpeg" alt="">
-            </div>
-            <button class="viewAll1"> & many more</button>
-          </div>
+   
         </div>
         <div class="footer2">
           <div class="contact">
@@ -552,23 +724,9 @@
           </div>
           <div class="infoBox">
             <div class="eachInfo">
-              <h2>Growth School</h2>
+              <h2>VRG Technology</h2>
               <a href="#">About Us</a>
-              <a href="#">Case Studies</a>
               <a href="#">Contact Us</a>
-              <a href="#">Refund Policy</a>
-            </div>
-            <div class="eachInfo">
-              <h2>Programs</h2>
-              <a href="#">Crash Course</a>
-              <a href="#">Masterclasses</a>
-              <a href="#">Intensive Programs</a>
-            </div>
-            <div class="eachInfo">
-              <h2>More</h2>
-              <a href="#">We Hiring</a>
-              <a href="#">Apply as Mentor</a>
-              <img src="images/logo2.svg" alt="" class="logo2">
             </div>
           </div>
         </div>
