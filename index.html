@@ -4,20 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GrowthSchool | Cloned by Yash Kumar Saini</title>
+    <title>VRG Technology</title>
     <link href="images/icon.svg" rel="shortcut icon" type="image/x-icon" />
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/carousel.css" />
     <link rel="stylesheet" href="styles/gridCards.css"/>
     <link rel="stylesheet" href="styles/footer.css" />
+
+
+
     <link rel="stylesheet" href="styles/faqs.css" />
+
   </head>
+    <link rel="stylesheet" href="styles/faqs.css" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+     const phrases = ["Learn", "Inspire", "Innovate"];
+     let currentIndex = 0;
+     const textElement = document.getElementById('text');
+     const newtext = document.getElementById('newtext'); 
+ 
+     function changeTextAndColor() {
+         newtext.classList.remove('visible');  
+ 
+         setTimeout(() => {
+             textElement.textContent = phrases[currentIndex];  
+             textElement.style.color = getColor();  
+             textElement.classList.add('visible'); 
+ 
+             currentIndex = (currentIndex + 1) % phrases.length; 
+         }, 500); 
+     }
+ 
+     setInterval(changeTextAndColor, 1000);  
+     changeTextAndColor();
+ 
+     // Timeline animation
+     const timelineItems = document.querySelectorAll('.timeline li');
+ 
+     const isInViewport = (element) => {
+         const rect = element.getBoundingClientRect();
+         return (
+             rect.top >= 0 &&
+             rect.left >= 0 &&
+             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+         );
+     };
+ 
+     const run = () => {
+         timelineItems.forEach(item => {
+             if (isInViewport(item)) {
+                 item.classList.add('in-view');
+             }
+         });
+     };
+ 
+     run();
+     window.addEventListener('scroll', run);
+ });
+ 
+ function getColor() {
+     const letters = '0123456789ABCDEF';
+     let color = '#';
+     for (let i = 0; i < 6; i++) {
+         color += letters[Math.floor(Math.random() * 16)];
+     }
+     return color;
+ }
+ </script>
+</head>
+ 
   <body>
     <nav class="navbar">
       <div class="navBox">
@@ -39,7 +100,7 @@
           <a href="#">Intensive Programs</a>
           <a href="#">Guides</a>
           <a href="#">About</a>
-          <a href="#">We’re Hiring 💼</a>
+          <a href="#">We’re Hiring </a>
           <button class="button1">Apply as Mentor</button>
           <button class="button2">Login</button>
         </div>
@@ -47,7 +108,14 @@
     </nav>
     <section class="section1">
       <div class="leftBox">
+
+        <h1>Transform Your <span style="color: #1093eb">Career</span>  with Expert-Led Training</h1>
+
+        <h1>Transform Your <span style="color: #1093eb"  id="text">Career</span>  with Expert-Led Training</h1>
+
+
         <h1 style="font-family:serif;">Transform Your <span style="color: #52b1f0 ; font-size: 100px;"  id="text">Career</span>  with Expert-Led Training</h1>
+
         <p>At VRG Technology, we're excited to offer a complete UI/UX Design Bootcamp. It's designed to give 
           you the skills you need to succeed in digital design. Whether you're starting a new career or 
           improving your current skills, our bootcamp is designed to provide hands-on learning, expert 
@@ -55,13 +123,21 @@
         <button class="exploreBtn">Explore Program</button>
       </div>
       <div class="rightImage">
+
+        <img src="images/home.png" alt="Home Image">
+
+        <h1 style="text-align: center; font-size: 70px; color: black;" id="new">Hello</h1>
+        <img style="border-radius: 100%; height: 70vh; background-size: cover; width: auto; padding-left: 130px;" src="C:\Users\HP\Desktop\Vernure\Growth\images\Person.jpg" alt="Home Image">
+
+
         <h1 style="text-align: center; font-size: 70px; " id="new"></h1>
         <img style="border-radius: 100%; height: 70vh; background-size: cover; width: auto; padding-left: 130px;" src="C:\Users\HP\Desktop\Vernure\Growth\images\Person.jpg" alt="Home Image">
+
 
       </div>
     </section>
     <section class="section2">
-      <h1>Why Join Our Bootcamp?      </h1>
+      <h1>Why Join Our Bootcamp? </h1>
     </section>
     <!-- For Video and content -->
     <section class="section3">
@@ -93,8 +169,7 @@
             <h1>Expert Mentorship</h1>
             <p>Learn from industry leaders who bring a wealth of experience and knowledge. Our mentors are 
               dedicated to helping you succeed, providing personalized guidance and feedback throughout the 
-              program.
-              
+              program.              
             </p>
           </div>
         </div>
@@ -115,8 +190,7 @@
       <div class="outerBox">
         <div class="mentors">
           <h1>Mentors. <br/>
-            Practitioners.😎</h1>
-            <button >View All</button>
+            Practitioners.</h1>
         </div>
         <div class="mentorCards">
           <div class="cardArrow">
@@ -174,7 +248,6 @@
       </div>
       <div class="experts">
         <h1>Experts</h1>
-        <p>from top brands & companies are mentoring at GrowthSchool</p>
         <div  class="companyLogos rightMovement" id="rightMovement">
           <div class="moveBox">
             <div><img src="images/company/logo1.svg" alt=""></div>
@@ -264,10 +337,18 @@
       <div class="gridContainer">
     
         <div class="gridCard">
+          <img src="images/quote.svg" alt="">
+          <p>First time in my life, I received Blockchain Anchored certificate 🔖 I went through the growth hacking mentorship with Vaibhav Sisinty and GrowthSchool. I learned so many new and unique things regarding growth hacking, and it was mind-blowing, like North star matrics, MTM, Hyper-personalized data-driven marketing, and many more things. Additionally, I made some lovely friends in the cohort system. Vaibhav gave very high-value quality content, and now he amazed us with such a unique, verifiable certificate on the Ethereum network 😯. This was one of the best programs of my life.</p>
+          <div class="userName">
+            <img src="images/users/user.jpeg" alt="">
+            <h2>Sandip Shinde</h2>
+          </div>
+
             <h2>Aspiring UI/UX Designers </h2> <br>
             <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIRERUSEhITFRUVFxcWGBUVFx8WGRYXFRsWGBgbGhsaKCgjGCAmIBcYJTEhJSktLi4uGCAzODMsNygtLisBCgoKDg0OGxAQGy0lICUwNS0tLi0rLS0tMDcvLS0tLy0uLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIALEBHAMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABgEDBAUHAgj/xABQEAABAwEDBggJCQYEBAcAAAABAAIDEQQSIQUGEzFBUQciMmFxkZOxFDNTcnOBstHSFRYXNUJSVKHBI1V0gpLwYqLC4UNjg5QkNERks8PT/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAIDAQQFBgf/xAA4EQABAwIDBAcGBgIDAAAAAAABAAIRAyEEEjEFQVFxE1JhgZHR8BQiMqGxwRVCkqLh8TOCBiNi/9oADAMBAAIRAxEAPwDmc8hvOxPKO3nKt6Q7z1r1Pynece8rwvSLYVdId5600h3nrVEWYCKukO89aaQ7z1qiJARV0h3nrTSHeetURICKukO89aaQ7z1qiJARV0h3nrTSHeetUV+xwOe661jnu2Na0uJprwGKi4gCSsEwFZ0h3nrTSHeetbHKeSZoY2SSwvibIXBl9pYXXKXuKcacYY0oVrVhjmvEhGmQq6Q7z1ppDvPWqIpwFlV0h3nrTSHeetURICKukO89aaQ7z1qiJCKukO89aaQ7z1qiJARV0h3nrTSHeetURICKukO89aaQ7z1qiJARV0h3nrTSHeetURICKukO89aaQ7z1qiJARV0h3nrTSHeetURICKukO89aaQ7z1qiJARV0h3nrUqzUedE/E+MO3/CxRRSnNPxT/SH2WKDxZCo1Pynece8q2rk/Kd5x7yramiIiIiIiIiIiIiIiIiq1pJAAqSaAbydS6LmNkjwK3QzPkbS48PwPFLxRtKaxUUJUTzNsHhFuhiBALi4gnVVjXvGrzVL55HNlexxFWOLMMRxCQab8a9aqeynWDqTjeNN8G0+K5m0MTVouaWafXs46X8OCtcMNuktE0Ra0GCEEB4Nbz5Lt6o2AXGgf7rna6llfJFoms72Nge4luGoYjEa+cBQq1Zn2+KN0slmc1jAXOcXMwAxJpeqVilTp0WhjT8wrsHiXVWk1LGeX1WiREVy3URERFds0d51ACSdTQKknmA1rZWnINpbC6d0L2xtpUuFDQmlbuug2mlF5yFYrTebPA0i4bwecBUawPvbRgF0rOa1aWxvZHdvStDQCcONStDtwquLtHHOpVWU2EXMG5kXGsWHHfyG/Yp4F9VuaDfS2p9f2uQBFetdkkiNJGFpOquo9B1FWV2QQRIM9qoLS0wRBRERZWEREREREREREREREREREREUpzT8U/wBIfZYospTmn4p/pD7LFF+iFRqflO8495VtXJ+U7zj3lW1JERERERERERFk2SyXwSXXWigJpUkmtABhU4bxT1iuQCTARYyLY/JzPKO7MfGnyczyjuzHxq32er1VmCrWR7c+CeOaNxa5jgQRjzEU2ggkEbiV1RskFvLbZDda9jmieLUb2JY9u8OIp6uYrmHyezyj+zHxrOyXlu0WYFrDxTjQtDxXeK4hatbDVGvFTKRG8cN4P1HA3Wpi6LqjCPQPHTX6hdes9sWi4TMr3LAYwcZntZ/KOO72QP5lCZM6LW/kTtadwjj/AFaSFh221y2ygnkNYyQDdaaVpXBt0bBjzKDGB7hA3rVw2GqNeC4iO/yWhRbP5KZ5U9mPjT5KZ5Y9mPjW/wCyVuqutlK1i92eEvc1g1uIHRXb6lsPkpnlT2Y+NbjNLJ0bbZGS8v5VAWACpa6hPGPdtCpxNOtQovq5fhBPgCVJjJcA7SVv4pWhoY2gawAAcwwHcrEswGoBWMsXYbZOSSA4MAYxgAaGiopxseUa4aysOS1MO2TqHvXmBsfHPY17GZg4B0gt/MAd5B38F7ChtPCZfedl3RB3WGgI0TOB2ms5AxMeI/lwP5VUPXSM1LLGY7S99HswwcwVaLhDwDU4ENG5QoZJb5Y9mPjXW2Vh8Q01aDm3YWz/ALNmO7f2lcDatWnXqh9IcRzgmD4LWItp8lM8qezHxp8lM8qezHxrr+yVuquZlK1aLafJTPKnsx8afJTPKnsx8aeyVuqmUrVotp8lM8qezHxp8kt2S9cdB6yHEjqKey1uqUylatF6miLHFrhQtNCOheVrqKIiIiIiIiKU5p+Kf6Q+yxRZSnNPxT/SH2WKL9EKjU/Kd5x7yrauT8p3nHvKtqSIiIiIiIiItnZDSCv/ADHezGtYtnZfED0r/YjWxhP8zfW4qTdV02Hgnc5od4W0VANNEdor99evojd+Lb2J+NdNsXi2eY3uCvkrkfiuK637W+Sp6Ry5X9EbvxbexPxp9Ebvxg7I/Gup3gl4LP4riut+1vknSOXz7lPNV0WVI7A2UPc/RjSXbobpKk8WprRorrxWZYMy3nKktgMwBazSCW5g4FsbuTX/ABU1/ZUjsjGzZ1SmoIhivdDhDFGR6jKepV4QpLVk/KUeVomB0DI4opd5DnSBwO7C6A7YS2qh7ZWzZpvroNd27hu07FDMZlXvomdWgtTT/wBMj/Un0Ryfi2/0H3rouSMqQ2mJtohfeiey+HUIw5wcQcDhzKuSstWe1XtBIH3KXsCKVrTlAbj1KX4vjrnNp/5b5KRrkEAnXkuc/RHJ+Lb/AEH3qrOCeRrmv8KZVjg4G64YtNRqdzLq14bwrNu8VJ5ju4qt+1sU8ZXuBB1Ba3yWTVcVyPLWaJnl07JHm/Q3YohJSjaVreFQafmsH5iP/wDdf9sP/wBFMYcj2uZmTpbPaBFHHDBpGYguAa04UHGqKi6SAt3lLOSzw2mGyyE6SfVSl1tcG3yTheNQKA47lsYbG4rD020GuD8oIEC4DbCbawJJ4dqtqVi4y1Q3JeZx0L7M2cNdKQ685lKBtKtuhxqde1U+iZ1aG1NH/TJ/1KY5UaG2qx3RSj5tXonKQzGjh0H/AErWpY/GURmLxLzmd7rdfh4TADRCw+sSfd0XLvomd+LHZH40+iZ34sdkfjXT743pfG9XfjGM6/7W+Sh0z1zD6Jnfix2R+NPomd+LHZH410++N6XxvT8YxnX/AGt8k6Z65h9EzvxY7I/Go/nhmW7J8cbzOJb7yygZcpRpdXWa6l3AFc/4Zf8Ay8Hpj7Dlt4DaeKq4ljHusTf3W/YBSZVcXAFcRyx453Qz2GLDWZljxzuhnsMWGrX/ABHmsoiIooiIiIilOafin+kPssUWUpzT8U/0h9lii/RCo1Pynece8q2rk/Kd5x7yrakiIiIiIiIi6VwZ8HlnyjZn2i0SSikhja2MhvJDSSSQanjfkpxHwSWBrLgktNKk8ttauDQfs/4QrXAV9Wu/iJPZjXRVyKuKrU6zsriINlUXEGyxI7NdaGhxoAANWzBXLM2l7GuP6BXXLxD9rp/QLTmygrq1mVctQWYDSvoTqaBVx9Q2c5wWdPMGtc46mgk+oVXJbFKLVbGOtDsJHcY1phsFdg1NWxhcOKsudoOGvqy1MViDSyhup46errV2u0xw5fgt1njldDI6k3M+XSRvJAODQHRuxw4p2rtrqEbCD6wQoPn3kmzQwsfGxsb7waA3C82hrUc2GPvWVweZQc+J8LjXRFpbzNfXD1Fp61ZUpMdSFVkwLQViniHit0NSJ3EKUPoA7DAMOAwwxw5lD+DqezvFo0MD2AaK8HP0t6uku0FBSmPWpka8amu6adOxRzMvw6k3hTA08S5VjGVPHvcgY/Z1qphik8T1fzRv4b+/RTqj/uYY4/lndx1b3amykH7LyR7I+5eLRc0cl1l03HY3buzfRZFZNzP6j7lVocahwbQjYSe8KmfUq4Ds+S5BnbnLPFZ7DZ7O6RpbZ4JnvbUXjcAY3DWMCSNRqNxUJyvb5rTO+0S1vuIPFBAbSgaG7gABRdwsmQJ442Mgt0zYg0XGXInhjaYNDnsLqDZUkgUCvfJFt/Hz9lB8C79HaFGl8IbN7kmbmb+6ey02hbLXgev4WhyHll1sbk+V4IeHzMfUUq9kRBcN4OB6SRsU+k5Q6D/pWgsuR3tlbNPPLM5vEYXhjQy+QHUbG0VcaAVNaDditnljKUNmZpp5GxxtBq53OW0AGsk7AMSuPiHse8ZNL6X1JMTA0ngq3RuWe1abKudFlsxe2WVoey5eYOUL/JoNu801DWsSwZ4WO1skFkl08jWF2iZWOUjEYCQNIx2843hQHM/IkeUJpfCpZC9goA5wfIQ0lt0l4PIAFcNbxq224XDU3tfVrEhrYkDW5+m6e3sWWgG5XWMn5ShnvmGRsgY644tNQHUBpXUcCNSzVyPM+9Z8qGCEyywgvJbG+7GOMItK9pwcA2mrbSmFF1xV4zDDDvAaZBAI494WHCCsVrTU47T3rWZx5tRW5jGTPkAY68LhDTUgjGoO9bVms9J71kKltR9NwewwRvWJjRc7tPBBYJHFxktVTQYPbsAaPsbguKZz5KFjtk9mDi8RPLQ44EigIrz0IX1evmPhL+tbX6Qewxb+CrVKjzmM2+6mwkqMoiLoqxERERFKc0/FP9IfZYospTmn4p/pD7LFF+iFRqflO8495VtXJ+W7zj3lW1JERERERERF33gK+rXfxEnsxroq51wFfVrv4iT2Y10VcHE/5nc1Q7VeXrxD9rp/QLk+VeGiNshFns2kjBoHySaMvpta0B1AdYJxx1BT/NDOGLKFn8IiBALi1zXa2OaG1Bpr1gg7iFF1J7WyQsLdSsDmlp1EEHoOC5xkiyWexTyNtpxZTRAsLmvBrx8AQdnQSdow6DaJiHBrWhznAnE3QA2lamh+8Ni02VrZC4mK0NgJbsc9xIqK4EMww3K3DvcJaJg6xY93zWriGNdDpAI0nTvWvyzlzJtpjLHyY0N11x15p2UNPy1K5mFkp0MLpJAWulu0adYY2tK7q1PqorVlFgideZFBUYgufI+h5rzDRSFtucWCS6wxnG815JpvoWiqsqEtZ0bAYPEjwEfPjZV0m5qnSVC2R1QfE/bvWZHyj0K8sY141Nd006dij+aEmUHCXw0GouaO8GNx49/kDzda1ckgukWjmZ4cY3rbc+HBsG++LCOPCd3EqUorFZNzOs+5Vjv/AGg31EnvChClPYvDzGS4F2NMQHEUAx2HBUJjxN44gP5R1DbrwCiOWsqFmnfJaJ4IbKImXYAx0j3yNa6rnPa6vLAAFBgSSsrJNlNphZPHlC3FkgqKmIHcQRotYIK2vZSGZ3GBpN+E7gRMQYU4UmiuVN01JxIvE4HHAE4epc64Wc0rVbLs0Mwc2NppZ3VGO0tIJFTWmIBxpWmrd5as81lhdaG2y0vMVJDHLo3Me1pF5puMaRUVxB61v8q21kbLzxWoIDa6zhh/uqKx6BnShwi972gb5jju7rrLWlzgBeV8/wDA9CX5XhFSAGTFwxF5txzS0+twP8q6Rlrg3dee+yPbG06MMiNXDDiyOc55ONMRTXiOdLAY2vkliijic95c50bbpJOJqRif91Mc3Moula5rzVzaY7619y0sD/yOa+WkC2Rvggxe446x2TcTC3KuCq4duaeahFpzeOTAyQSC++ct8LLHOMML2BvGFbtSa0w269SmeZ2UZbRZ9JKbxvva14bcEjGnivA3Fbx8YIIIBB1g4hYliyjDNUQzRSXdYje11K1pW6cNRXVr4t1dkPbLutbw0tynLwbMk6Tn8VeZrPSe9ZCx2az0nvWQtUqKL5j4S/rW1+kHsMX04vmPhL+tbX6Qewxbuz/jPL7hTZqoyiIusrUREREUpzT8U/0h9liiylOafin+kPssUX6IVGp+U7zj3lW1cn5TvOPeVbUkREREREREXfeAr6td/ESezGp7aZmxsc97msa1pc5ziA1rQKkknAADeoFwFfVrv4iT2Y1u+E2d0eSbY5mvRFu3kvIY7VtuuP64Lg4gTXcO1UO1UC4HW2SSyyPkgiEjDopHuoQ9ldI0lh4rDx7uAxuDdQTTg8tNldHa5LM25F4XLU3QxhLGRtLmgYXcNY9dFxfN61mGB7G3bszLsoLQQ8GtAa11XjQ7Fssh5enhsUuTtHE+N7jcJrfbfc11ddDjqwwOOIFFfR2e+rWgH4j4DfrEkbtJUh70NC7dlG3RGeOzX2iWRrnsxcDdbroWEVrQ7RyTzLxV1TR7nAFoq0SuBLjTAiTGlMd21cohzXtksItFLQ9rG0Y8OBNxuH7NpdfLBjSlKjUDXHa8HNufpW2MWezvF580kruUWENoWk6zUt6RhQUJW6/ZzGU3OpVA7L8Qt2zqeVuMqL6NpBuuhUfWlZNbhqm+xiT4zUdh2qpjcGCV1XN4rrj9IDrFMHPcL24Ea6alsvAIfJR/0D3Ly2xxNNRGwEaiGgELldJ69FU5D6/pVlGDqmnEOO7WohwdWWFgn0VqE1RFUtjdHcppKcvXWp6lMboJIOotp1rAyNkCz2S+IWEX7t684urdrTlecVJtQNpvbJvHCLHfP2UatMuqseALTxm43R857lnaMeVd1j3L1G2leOXYaiR+iroGfdb1BemRNGpoHQKKolWgerqJxOha63mdrDC3Ql7SL7brbPEaUPK1Yb8FqLXnxYjDZmRudFHKbrwz9m+CNgIAOjxZV10cX7NSF7zryZfNogldPFHO6CRskMDp2uELAwxuawEtILWuxpspWhUU+ZVj/FWv/sJfcuzQoYd7M1Qum0QD1QJmDefoFe3LqVNbdlyK12KV8btJAwOZMaFrwAGnUaHEHWBsKyBkG0TOrKQ0GprUOJ6AMBrUSyZkGOCOeKCS1TPtEYhuOsskLG8YHSPe4UAaL23addQuqujrdxcMDqw3LibR2Th3PBLnubNg4mBZv5YG/fvhbDcW+kIpgA8Yv67lzzQugfJC41LH6/vNdxmnqW6zVYZHyUIwbtqdZ5iFpc45btulDqjCMNLtoDQdfrVjImV2x2mJglaHSuEd29QuvbMK0xpjReRw7BS2l7gJAcfuPATK7uKpOqYIudbM0HsmATft/hdJgspa6pLfUHfq49y1Wa+acVhdI6OSR+kDQb93C7Uil0DettBHIHcbVj9u9+V0d6jOYmbLbE6UttMc18MFGAC7dLtdHHXX8l7STlcC7hbWfKF43KMzSG8b6R/alTNZ6T3rIWOzWek96yFUVsIvmPhL+tbX6QewxfTi+Y+Ev61tfpB7DFu7P+M8vuFNmqjKIi6ytRERERSnNPxT/SH2WKLKU5p+Kf6Q+yxRfohUan5TvOPeVbVyflO8495VtSRERERERERd94Cvq138RJ7Man9ogbIx0b2hzHtLXNOIc1woQeYgrn3AS4fJrxXEWiSo3VbGV0dcDE/5nc1Q7VcKdmVetFrjbMGGGRzWxltagtD4SXVwBDm7NhWFa8hy2WOGQwTXwXmYij4wA6jLrm1obta13jnWFwjZWf8AKlpdUxPa4Ri6S111jWhpqMeMAD0EKScEuUrTa3zwTSS3XR345zQuY9jmghpeCH1DqkEHknetyliMThnirIc0gWMtNxBAImdZuJ01i9lN7NwMjWL95G5SLJOf8cNjjYYnF7GNja6rWxvuC6CSTebqFQGmhOFVEc07FHarawStmMZ4jHxtoNKwB+J1NFLxprFW7F07KWarZ5Iw/RuhaOO0spI8i8QBI2l1t4h1BTEHYaLY5t5DZYotDG97m33PF8g0vbBQDD9STtV9LaFCjSe6m0te/dJMa741GsRcHXcM5mtnKtuVbckjw0Ek0AxJK1DssXiRHcAH2pHUr0AYrgVMTTowHG50G8933NlinSfU+ELYl1Knc2vUtVkDOWG2B5ja9ojuk3wByr1KUJ+6V7NvfQktY9tCCY3XgPObrotVmVLJW0B9mihu3KGJpa2Tl/aJINMNWq9ir6FalWY+NRGtjrEwR7w7RYKmvTqU3tB0M7p3TqNO+5Un8KZ94L3HM12AIK8aV/3D/UF6je46209YPcpED0VgH1BWktWUCGmSScxM0j42tawOPEJaSagmuBKzWWR5AItLiDiDcjxB/lWIGw6BzpwCxsspx36V4FKdKw84Mu3BG2BwxAeSBhd+y3mrt9S3BTLnZWC8kSQItpu8VbEraSh8RY4y6Rpexha5jRyyGggtAxBIWba4y4tpz/aLd33Vr57U2aGKRup0sB6DpGVHqK2NqNMbxaAHEkAHAUrrVDhABIvJGkaRuHeoOEhfPWfluL7faTePFkMfKJ8VSPWcdbSsfg6sDrRlSzhuqNxlca0o2MVrUY8q4P5lqLXM+Z0kgBLnaSV3MOM9xPRip3wD5NElotMhw0cTGVoD41xJ5QPkgtuo7KwjsUIsuz2eMh2Lgdf/ABHO/ImiifB1YrHE+bwW0mclrLwMZZdAL6awK1x6lL4bIGmtf8rR+YAKgGeEQyPZr2T45Gy2iRsZfjLdawPfqdUAnEat+5arHSHMBMujlbjN/BVGmS9roFp57tI+a6EzWek96yF892PPLK9ne2R7rQ9rDxmSxm64CpLSS2rTQnEYjDYKLvlilc+Nj3MLHOa1xYdbCQCWnnGr1KurTLIuDyWwshfMfCX9a2v0g9hi+nF8wcJDgcq2uhr+1phvDWg/mFtbP+M8vuFNmqjiIi6ytRERERSnNPxT/SH2WKLKU5p+Kf6Q+yxRfohUan5TvOPeVbVyflO8495VtSRERERERVayvqRFOuDcThsjmW9tnivC/GA2SRxNGghrxRlcBexrTUrcGfOUdHeNo4we9p4jPstYaYCmslR7N90LZHaaGSZroyA2Jxa6px1NIvigNRXnWyyjazLZ4KRNjYy/HGG0q4NuVc6m0k9+tWYamx1YZhPMDh61RsZl1bL8Ya5riOXGxxJxxpQ9yw8lT3LVDIPvhvSH1b+qu5ZyrBaIonQyB91ha4gHAgDCpGO3UsCWeG9G6KQPDRHfpXiSNAvjHnx9a+X4rCupY6pVA+F7Z/2g/Xv7LL0mCOfDNa7VwI8JH0XTPDX+SP8AUE8Nf5I/1BRLLmfVjFmmNntURmEbzGCHYvobuzeuYZvZ0Tut0UlomfIH1iIc4hoEt2lAKAceNtaU1L2Fag+nTc8suATBzCYXlWiSAbSuw5Vtxm4rcGNxca7en9Nq1k8d00rXUQd4Oo8yuvjkcBxTTYA2g/vnXqeM6NpIIIJbju1j9f7C8LXc6uXVHAzqDBiOA3AAGRvkEru0wKUMabLGikLSHNNCNq3mSLSC97WYBwDgNjTheAG7FaJZWTcpQWd96aWNlRRoc9rScRUi8RUYK3ZJqHEsp0xN5+Rn+eNuAWMa1ppOJ4f0pTcf9/8Ayr1G1wOLq+qi03zssf4iHtY/iT52WP8AEQ9rH8S9r0FXq/JcHKtdlGEPGhdPHEWSyuLZDdvX3FzHDeKH81r/AJEj/F2XtFIDnXYvLw9rH8Sp86rH5eHtY/iW8yrWYIyH5eU69qnLlhZMhDGiFs8cpdNE8NjN66GODnuO4UaOrnW+yxG58T42gkvjkZgaUvClfzWvGdliH/Hh7WP4lZjz3sBNTaoxTCmJ/MCmzYtepTrVHTkPhy4AcFgydy4ZmUDJLPZw2rrRY7TC3e19wSCnZkHpUo4BcqFs9ohDb2liZKNlNE66evTDqWmzdtUFny+JNI3wcT2hwfQ3bkjJrmGv7TQr3BXbrPY8pyukkDIhHPGx5rQ/tY7mobWtr6lJ9NzpAab9h1G7nG7VRgrvnhb/ACR/qC0+dGUHMs7nXGh7aPjD3AX3sN4NFMSXUu4b1Znz2sV12jnY991xa0B3GcASBqXNX250rnue4uJOJJrX+6pSwLnz0jco7Qb/AD+a1MXi/Z4ESTfgsnI/CE+22iOzvZE1khpKTeGhYDxrxJINeQCQ0AuFddFK+ErKMlkghksz7pfIQTg8Ft0n7VRr3KD2nKD3Cjn1Fa9JGomnKPOarFyjadJZxHU0a6t2uAOIJp0FbeztnNpVWl0a3GoPj5aRzKntNtSu1sWNpMT97ab1rcs585QvviFpcGlrRxWtaeMxpNHAVGs4gqJEqX2uaOKGcDwabSMhJZKCJY5LrW/swMXUBreBbyttKGIUWyWhriAIuumqIiIiIiIiKU5p+Kf6Q+yxRZSnNPxT/SH2WKL9EKjU/Kd5x7yrauT8p3nHvKtqSIiIiIsxtgdhVzBqNDWorjjQELDW2iffaHbgA7mIFPzpXrGxX4em17ocsgSvVhMkLr7JWtcARUVN4OFCDVuojCiyoIzIGRhzL5fQBodTjBjWjV/hWGtvm5PBE8ySyMaWjiNd944E+od4Usa5mBw78S0ElosNZOgEdpMHgJJsraVEOeBMT2wt5lm0ts0TYo3AEC6Dj63Ybcesqxm24GBzag0dsrqcG7+gqOZRtRlkLzt1DcNy2maklHyAkAXAak0xBHvK83jtjHB7CqBxmrIqPPF2aT4SeZkjVdahis+MbHw/COUa98eELTaIffb1O9ytCz0OEgFMQeNUHWKYawQD61dtAF51CCLzgCMRgSra9lVpU68OdzHeuM6mDZ25Sv54yVBIjO/GW8fWSR+RW1suekNOOXNPmmQdYDT/AJVz9Fx6/wDxjZdYXpAdrSWn5G/fK2hiqw/NPO/1XQ7RnjEeLFxnHAVq1tTvcan8h0hQ7KPhM8hkka4uPNgANQA2Af3iSVrUotrZ2x8Js+Th2wTqTd3Kdw7AAq6lV9T4isrwGX7jupPAZfuO6li0Si6fvcfXiq1leAy/cd1J4DL9x3UsWiUT3uPrxRZLrI5oq8XBUDjVxJrqpXcsaeQspdaJK7qinTUJREIcRYweIj7yFhYMbJi+9QA7zSgw5llWCzFri5724j/EcSanYriLVpYNjHB2ZxIJNzvNidFAUwDKkWaWgNpY2ZwLXAtAxAvOFG1OFPfRZ88t1zm11OI6jT9Fp8mW1gZdLG16Aa/Eti4xSYkUO9p/RcWvtanTxrxXa4WAixFifeAtZ07pmBwXYbsZ1WkKzC10jh8pg3GkFe9P/eCysmSwhzjaC0Rhji7VidQAprNTgFqfAyDi8FvNr6ti9G0xtFAy953H71jHbWwQplrXEyNWgAie0xB4akG5G5Yw+w69U3YAO3yC0tvlL7zQ6OhEeJDr37Nt0CtDdGJ1c1dS1jrCT9tn+b4Vu8qWsPo260Ebhj0V/RYDG1NBrXTwjWYql0xY5ua8E/PTQ7rBaWKwgw9U08wcRqRx4ea1dogLCASDUVBGo6xt6FbWTb5Q51Aahou134kkj1k9QWMtd8Bxy6LURERRRFKc0/FP9IfZYospTmn4p/pD7LFF+iFRqflO8495Vte5zx3ece8q1VSRekXmqVRFtbLll0YA0FkfTa+Briek7VnxZ2vbqseT8RQ/+GANDrFQQo3VKqPRt1hQNJh3KR2LOCEvrPZILn/Ka8GvQZAKa1kZatuSp4nCOG0RS0bcfdBa0gkmo0hJBBpzUBCilUqsvBeIcSRzKOZO8+KmmbmVsnMiu2yK+8UDXxNcKgDW+rgK9AAWVle35ElheyOOZjyOI+6eK4YjW44bDhqJUBqlUh8Rmd+orBpTqT42W5ayyRzgxWiYwXgS18ILyBSrdYaa6r2GvUpS/OHI2yw2g9JA/wDsK57VKrDWuYIa5wHMp0fafFSybOSx3jcycwt2XpXg05wKhePnNZf3bH20ii1UqrMz+sf1HzUsvafE+alXzlsn7sj7aT3Kvzmsn7tj7d/uUUqlUzP6x/UfNMvPxPmpWM5rJ+7I+3f7lX5z2P8AdjO3f7lE6pVMz+sf1HzTLz8T5qWfOex/uxnbv9yp85rJ+7Y+3f7lFKpVMz+s79R80y8/E+alfzmsn7tj7d/uVPnLZP3ZH20nuUVqlUzP6x/UfNMvPxPmpT85rL+7Yu2kVPnLZv3dF2sii9Uqmd/E/qPms5efifNSO25zwmmgyfBGRyjI+SavQKtu+uqx25ZD+NIC1+6NtARsoNnrNVpaqlVqYjCtxIiqSRM6+crZwWKq4OoalI3Ii9x9df54qYR5esgZStsvfeuR0/8AkqtVlPLYeAImuBEgPGAAcwbHAE1B2iq0lUqqW7NoMcHNBBHafur3bTxb2OY98h3EC3IgCPopO3OizFhBybDpPvNkkDOm5r17LytWfOtzAQLJYaHA3oHSVH87yo7VKrf98thzieZPmubkEQfqfNb2XORzv/SWAdFlaFqbVaDI68WsbzRsDB1BWKpVYDANAstY1ugXpF5qlVlSXpSnNPxT/SH2WKKVUrzTP7J/pD7LFF+iFe5OUekryiLWUAiIiLKIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiLdZE8WfOPc1EWHaLBX//Z"; <br>
          <p>Start your journey in UI/UX design with our bootcamp. Gain hands-on experience, learn industry-standard tools, and build a portfolio to stand out in the job market.    </p>
          
+
         </div>
         <div class="gridCard">
          
@@ -292,9 +373,94 @@
         </div>
         
         <div class="gridCard">
+
+          <img src="images/quote.svg" alt="">
+          <p>Thanks to Vaibhav Sisinty for launching this amazing GrowthSchool, I have attended four of the growth school workshops I’ve learned a lot. I think GrowthSchool helping me achieve my goals. Thanks to GrowthSchool for creating an amazing workshops.</p>
+          <div class="userName">
+            <img src="images/users/user2.jpeg" alt="">
+            <h2>Surbhi Sanodiya</h2>
+          </div>
+
+            <h2>Aspiring UI/UX Designers </h2> <br>
+            <img src="images\users\UI_UX_aspirers.jpg" >
+         <p>Start your journey in UI/UX design with our bootcamp. Gain hands-on experience, learn industry-standard tools, and build a portfolio to stand out in the job market.    </p>
+         
+        </div>
+        <div class="gridCard">
+         
+          <h2>Graphic Designers </h2> <br>
+          <img src="images\users\graphic_designer.jpg" >
+          <p>Transition into UI/UX design seamlessly with our bootcamp. Explore user experience principles, master digital interface design, and build a portfolio that showcases your expanded skill set.</p>
+         
+        </div>
+        <div class="gridCard">
+          <h2>Web Designers </h2> <br>
+          <img src="images\users\web_designer.jpg" >
+          <p> Enhance your web design skills with our bootcamp. Learn user-centered design principles, create immersive interfaces, and stay ahead in today's digital landscape</p>
+         
+        </div>
+        <div class="gridCard">
+         <h2>Developers and Engineers </h2> <br>
+         <img src="images\users\developers_and_engineers.jpg">
+         <p>Bridge the gap between tech and user experience with our bootcamp. Gain insights into user-centric design, learn to create seamless interactions, and collaborate effectively with designers.
+
+         </p>
+        </div>
+        
+        <div class="gridCard">
+          <h2>Product Managers </h2> <br>
+          <img src="images\users\product_manager.png">
+          <p> Lead successful product development initiatives with our bootcamp. Gain a deep understanding of user needs, learn to prioritize features.</p>
+        </div>
+        <div class="gridCard">
+
+          <img src="images/quote.svg" alt="">
+          <p>I want to thank GrowthSchool for hosting such a comprehensive and profound workshop. We all know LinkedIn is a goldmine of opportunities. And this workshop is designed for anyone who wants to kick-start their LinkedIn journey and also want to use it to its full potential. The workshop is well worth your money and time. Thank you Vaibhav Sisinty ↗️ for conducting such an engaging and valuable session and sharing so many incredible hacks.</p>
+          <div class="userName">
+            <img src="images/users/user4.jpeg" alt="">
+            <h2>Pragya Singh</h2>
+          </div>
+          <h2>Entrepreneurs </h2> <br>
+          <img src="images\users\entrepreneurs.jpg"> <br>
+          <p>Launch user-friendly digital products with our bootcamp. Learn to identify user pain points, prototype and test your ideas, and turn your vision into a successful digital experience.</p>
+
+        </div>
+        <div class="gridCard">
+          <img src="images/quote.svg" alt="">
+          <p>First time in my life, I received Blockchain Anchored certificate 🔖 I went through the growth hacking mentorship with Vaibhav Sisinty and GrowthSchool. I learned so many new and unique things regarding growth hacking, and it was mind-blowing, like North star matrics, MTM, Hyper-personalized data-driven marketing, and many more things. Additionally, I made some lovely friends in the cohort system. Vaibhav gave very high-value quality content, and now he amazed us with such a unique, verifiable certificate on the Ethereum network 😯. This was one of the best programs of my life.</p>
+          <div class="userName">
+            <img src="images/users/user.jpeg" alt="">
+            <h2>Sandip Shinde</h2>
+          </div>
+        </div>
+        <div class="gridCard">
+          <img src="images/quote.svg" alt="">
+          <p>Keep learning and keep growing !! No-code is the enabler to convert ideas into realities. Really excited to be part of the bandwagon !!! Keshav Sharma and Mayank Nagpal – it was a great session !!! GrowthSchool kudos for making weekends fun again !!!!</p>
+          <div class="userName">
+            <img src="images/users/user5.jpeg" alt="">
+            <h2>Sreejith Nair</h2>
+          </div>
+        </div>
+        <div class="gridCard">
+          <img src="images/quote.svg" alt="">
+          <p>GrowthSchool you are doing a great job by bringing experienced people like Deepan Siddhu and Ashwin Palo to share their observations and teach people about Performance Marketing! The learning is un-parallel compared to other courses available out there. No matter how many years of experience you have, there is something that you will take away from the webinar! Great Work!</p>
+          <div class="userName">
+            <img src="images/users/user1.jpeg" alt="">
+            <h2>Raj Vasani</h2>
+          </div>
+        </div>
+        <div class="gridCard">
+          <img src="images/quote.svg" alt="">
+          <p>Always good to learn from a new perspective. Brushed up my skills and learned new ones that will enhance Creative as well as Reasoning thinking. Growth School Thanks for the opportunity</p>
+          <div class="userName">
+            <img src="images/users/user3.jpeg" alt="">
+            <h2>Ritika Anand</h2>
+          </div>
+
           <h2>Product Managers </h2> <br>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLswtVhElwoO05Vj3oMmsMQ8ySFuInCELWTA&usqp=CAU" <br>
           <p> Lead successful product development initiatives with our bootcamp. Gain a deep understanding of user needs, learn to prioritize features.</p>
+
         </div>
        
         
@@ -306,7 +472,7 @@
         </div>
     </section>
     <section class="section5">
-      <h1 >What You'll Gain ⚡️</h1>
+      <h1 >What You'll Gain</h1>
       <p >Fast-track your UI/UX career with VRG's bootcamp</p>
     </section>
     <section class="section3">
@@ -350,10 +516,18 @@
           </div>
       </div>
     </section>
+
+
+
+   
+
+<section class="faqs">
+
    
 
 <section class="faqs">
     <!-- Design on Dribbble: https://dribbble.com/shots/3967265-FAQ -->
+
 <h1>Frequently Asked Questions</h1>
 
 <div class="faqs-container">
@@ -444,38 +618,9 @@
 
 
 
+
     <footer class="footer">
-      <div class="footerBox">
-        <h1>Backed by 💰</h1>
-        <div class="imgsBox">
-          <div class="bigImages">
-            <div><img src="images/owl.svg" alt=""></div>
-            <div><img src="images/footer2.svg" alt=""></div>
-          </div>
-          <div class="inverstors">
-            <p>80+ Angel Inverstors</p>
-            <div class="overlapImages">
-              <img src="images/users/user.jpeg" alt="" >
-              <img src="images/users/user1.jpeg" alt="">
-              <img src="images/users/user2.jpeg" alt="">
-              <img src="images/users/user3.jpeg" alt="">
-              <img src="images/users/user4.jpeg" alt="">
-              <img src="images/users/user5.jpeg" alt="">
-              <img src="images/users/user.jpeg" alt="">
-              <img src="images/users/user1.jpeg" alt="">
-            </div>
-            <div class="overlapImages">
-              <img src="images/users/user.jpeg" alt="" >
-              <img src="images/users/user1.jpeg" alt="">
-              <img src="images/users/user2.jpeg" alt="">
-              <img src="images/users/user3.jpeg" alt="">
-              <img src="images/users/user4.jpeg" alt="">
-              <img src="images/users/user5.jpeg" alt="">
-              <img src="images/users/user.jpeg" alt="">
-              <img src="images/users/user1.jpeg" alt="">
-            </div>
-            <button class="viewAll1"> & many more</button>
-          </div>
+   
         </div>
         <div class="footer2">
           <div class="contact">
@@ -494,23 +639,9 @@
           </div>
           <div class="infoBox">
             <div class="eachInfo">
-              <h2>Growth School</h2>
+              <h2>VRG Technology</h2>
               <a href="#">About Us</a>
-              <a href="#">Case Studies</a>
               <a href="#">Contact Us</a>
-              <a href="#">Refund Policy</a>
-            </div>
-            <div class="eachInfo">
-              <h2>Programs</h2>
-              <a href="#">Crash Course</a>
-              <a href="#">Masterclasses</a>
-              <a href="#">Intensive Programs</a>
-            </div>
-            <div class="eachInfo">
-              <h2>More</h2>
-              <a href="#">We Hiring</a>
-              <a href="#">Apply as Mentor</a>
-              <img src="images/logo2.svg" alt="" class="logo2">
             </div>
           </div>
         </div>
