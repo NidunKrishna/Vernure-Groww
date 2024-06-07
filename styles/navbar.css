@@ -16,7 +16,7 @@
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 30px 0px;
   height: 72px;
-  background-color: var(--white);
+  background-color: rgb(14, 57, 37);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@
 .logo {
   flex: 1; /* Let the logo occupy available space */
   display: flex;
-  justify-content: center; /* Center horizontally */
+  justify-content: left; /* Center horizontally */
   align-items: center; /* Center vertically */
 }
 
@@ -48,6 +48,7 @@
 .navLogin {
   padding: 0 8px;
   box-sizing: border-box;
+  background-color:rgb(14, 57, 37);
 }
 .navLogin button:last-child {
   color: var(--black);

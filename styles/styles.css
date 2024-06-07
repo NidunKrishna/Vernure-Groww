@@ -2,6 +2,10 @@
 :root {
     --green: #37ed81;
   }
+  .fluid-container{
+    background: linear-gradient(45deg, #113428,#113428);
+
+  }
   .section1 {
     display: flex;
     justify-content: space-around;
