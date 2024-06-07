@@ -95,7 +95,7 @@
     padding: 20px;
     max-width: 100%;
     margin: 16px auto 0px auto;
-    color: var(--black);
+    color: var(--white);
   }
   .section2 h1 {
     font-size: 40px;
@@ -328,12 +328,14 @@
     line-height: 1.5;
     margin: 16px 0;
     word-spacing: 5px;
+    color: var(--white);
   }
   .contentBox p {
     font-size: 15px;
     line-height: 1.5;
     font-weight: 200;
     padding: 0 0 16px 0;
+    color: var(--white);
   }
   @media only screen and (max-width: 992px) {
     /* Section 1 */
@@ -413,12 +415,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
 
-  }
-  
-
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
-
-
 *,
 *::before,
 *::after {
@@ -428,7 +424,6 @@
 }
 
 .body1 {
-  --color: rgba(30, 30, 30);
   --cardBgColor: linear-gradient(180deg, #3F5C52 0%, #2C3834 100%);
   --dateGradient: linear-gradient(90deg, #77D39C 0%, #0BC5F8 100%); 
   gap: 1rem;
