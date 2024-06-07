@@ -8,8 +8,11 @@
     margin: 0 auto 60px auto;
     width: 1600px;
     max-width: 100%;
-    color: var(--black);
+    color: white;
+    background-color: #113428;
+    height: 100vh;
   }
+  
   .leftBox {
     width: 100%;
     padding: 36px;
@@ -63,8 +66,7 @@
     border-radius: 100px;
     border: 1px solid var(--black);
     color: var(--black);
-    background-color: var(--white);
-    transition: all 0.4s;
+    background-image: linear-gradient(to right, aqua,white);    transition: all 0.4s;
   }
   .exploreBtn:hover {
     background-color: var(--black);
@@ -205,6 +207,38 @@
 .visible #new {
   opacity: 10;
 }
+.course-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  margin-left: 350px;
+    transition: width 2s linear 1s;
+
+}
+
+.course-list li {
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+}
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
 
 .timeline {
@@ -217,6 +251,10 @@
   transform: translateY(-100px);
   transition: all 0.5s ease-in-out;
   margin-bottom: 20px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .timeline .date, .timeline .title, .timeline .descr {
@@ -288,7 +326,7 @@
     .section1 {
       flex-direction: column;
       margin: 0 auto 0px auto;
-    }
+     
     .leftBox h1 {
       font-size: 40px;
       line-height: 44px;
@@ -354,7 +392,6 @@
 
   }
 
-}
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
